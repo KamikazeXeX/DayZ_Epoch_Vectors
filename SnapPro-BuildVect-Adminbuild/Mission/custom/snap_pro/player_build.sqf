@@ -6,7 +6,7 @@
 Snap Build Pro w/Admin Fast Build+Upgrade
 
 Edited by KamikazeXeX from XeXGaming www.xexgaming.com
-Date: 16/8/14
+Date: 20/8/14
 SnapBuildPro v1.3.1
 */
 /*
@@ -514,30 +514,30 @@ while {_isOk} do {
 			deleteVehicle _objectHelper;
 		};
 
-		if(_location1 distance _location2 > 10) exitWith {
+		if(_location1 distance _location2 > 20) exitWith {
 			_isOk = false;
 			_cancel = true;
-			_reason = "You've moved to far away from where you started building (within 10 meters)";
+			_reason = "You've moved to far away from where you started building (within 20 meters)";
 			detach _object;
 			deleteVehicle _object;
 			detach _objectHelper;
 			deleteVehicle _objectHelper;
 		};
 		
-		if(_location1 distance _objectHelperPos > 10) exitWith {
+		if(_location1 distance _objectHelperPos > 20) exitWith {
 			_isOk = false;
 			_cancel = true;
-			_reason = "Object is placed to far away from where you started building (within 10 meters)";
+			_reason = "Object is placed to far away from where you started building (within 20 meters)";
 			detach _object;
 			deleteVehicle _object;
 			detach _objectHelper;
 			deleteVehicle _objectHelper;
 		};
 
-		if(abs(_objHDiff) > 10) exitWith {
+		if(abs(_objHDiff) > 20) exitWith {
 			_isOk = false;
 			_cancel = true;
-			_reason = "Cannot move up or down more than 10 meters";
+			_reason = "Cannot move up or down more than 20 meters";
 			detach _object;
 			deleteVehicle _object;
 			detach _objectHelper;
